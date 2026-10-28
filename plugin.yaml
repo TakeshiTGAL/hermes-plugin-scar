@@ -1,0 +1,33 @@
+name: scar
+version: 0.2.4
+manifest_version: 2
+requires_hermes: ">=0.21.6"
+description: >
+  Keep the tool-call shape you denied on a Hermes approval card and stop
+  that shape before it runs. hermes chat shows a numbered menu. The
+  highlight starts on Allow once. Press 4 to choose Deny. That choice is
+  the mark this plugin keeps. Typing letters does not move the highlight.
+  The match is the tool name, the argument keys that carried the rm
+  tokens, and the token set, including an rm inside a shell -c string.
+  A path is not part of the match. Only a tool with a scar is compared,
+  and only under the keys that scar kept. scar_forget removes one scar
+  after the person approves it on the Hermes card. A ledger that cannot
+  be parsed stops only an rm command whose shape was read. A forget
+  question past 7 lines of 63 columns is not sent, and the scar stays.
+  Records stay in this profile's plugin-data after secret-shaped text is
+  removed. Nothing is sent off the computer.
+author: TakeshiTGAL
+license: MIT
+homepage: https://github.com/TakeshiTGAL/hermes-plugin-scar
+platforms: []
+provides_tools:
+  - scar_check
+  - scar_list
+  - scar_forget
+provides_hooks:
+  - pre_tool_call
+  - post_approval_response
+python_dependencies: []
+tags:
+  - scar
+  - tools

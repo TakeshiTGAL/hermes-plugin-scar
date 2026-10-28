@@ -1,0 +1,5 @@
+scar is MIT, copyright 2026 TakeshiTGAL. See LICENSE.
+
+The Qwen3-0.6B-Q8_0.gguf weights are not included. The README names the file
+and the sha256. The llama.cpp binaries are not included. The README names
+the build and the archive sha256.
